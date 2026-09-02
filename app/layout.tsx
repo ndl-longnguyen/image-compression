@@ -49,6 +49,9 @@ export const metadata: Metadata = {
       },
     ],
   },
+  verification: {
+    google: '2n_hKWDM5r9dlRixMDRAsSCW6hbadPKFb5ccKFfG3i0',
+  },
 }
 
 export const viewport: Viewport = {
