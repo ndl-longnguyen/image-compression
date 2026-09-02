@@ -124,9 +124,36 @@ export default function ImageCompressor() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-background to-primary/5 p-4 md:p-8">
+      {/* Top Navbar */}
+      <header className="border-b border-border/40 bg-card/70 backdrop-blur-md -mx-4 -mt-4 md:-mx-8 md:-mt-8 px-4 md:px-8 py-3.5 mb-8 sticky top-0 z-50">
+        <div className="max-w-6xl mx-auto flex items-center justify-between">
+          <div className="flex items-center gap-3">
+            <img
+              src="/logo.png"
+              alt="Logo"
+              className="w-9 h-9 rounded-full object-cover border border-amber-500/40 shadow-sm"
+            />
+            <span className="font-semibold text-foreground text-base tracking-tight">
+              Image Compressor
+            </span>
+          </div>
+          <span className="text-xs px-2.5 py-1 rounded-full bg-primary/10 text-primary font-medium border border-primary/20">
+            100% Client-Side
+          </span>
+        </div>
+      </header>
+
       <div className="max-w-6xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-12">
+        <div className="text-center mb-12 flex flex-col items-center">
+          <div className="relative mb-5 group cursor-pointer">
+            <div className="absolute -inset-1.5 bg-gradient-to-r from-amber-500/30 via-yellow-500/40 to-amber-600/30 rounded-full blur-md opacity-60 group-hover:opacity-100 transition duration-500"></div>
+            <img
+              src="/logo.png"
+              alt="Logo"
+              className="relative w-24 h-24 md:w-28 md:h-28 rounded-full object-cover shadow-2xl border-2 border-amber-500/40 ring-4 ring-black/10 transition-transform duration-300 group-hover:scale-105"
+            />
+          </div>
           <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
             Image Compressor
           </h1>
@@ -442,6 +469,19 @@ export default function ImageCompressor() {
             )}
           </div>
         </div>
+
+        {/* Footer */}
+        <footer className="mt-16 pt-8 border-t border-border/40 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-muted-foreground">
+          <div className="flex items-center gap-2">
+            <img
+              src="/logo.png"
+              alt="Logo"
+              className="w-5 h-5 rounded-full object-cover border border-amber-500/30"
+            />
+            <span>All image processing is performed locally in your browser.</span>
+          </div>
+          <p>© {new Date().getFullYear()} Image Compressor. All rights reserved.</p>
+        </footer>
       </div>
     </div>
   );
