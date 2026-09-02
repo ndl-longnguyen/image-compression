@@ -56,6 +56,9 @@ export const viewport: Viewport = {
   ],
 }
 
+import { Navbar } from '@/components/layout/Navbar'
+import { Footer } from '@/components/layout/Footer'
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -63,8 +66,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`bg-background ${geistSans.variable} ${geistMono.variable}`}>
-      <body className="font-sans antialiased">
-        {children}
+      <body className="font-sans antialiased text-foreground bg-background">
+        <div className="flex min-h-screen flex-col">
+          <Navbar />
+          <div className="flex-1">{children}</div>
+          <Footer />
+        </div>
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
     </html>
