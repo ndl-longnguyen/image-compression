@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { ChevronRight, LucideIcon } from 'lucide-react';
+import { ChevronRight, LucideIcon, ExternalLink } from 'lucide-react';
 
 interface ToolLayoutProps {
   title: string;
@@ -25,13 +25,26 @@ export function ToolLayout({
     <div className="min-h-screen bg-gradient-to-b from-background via-background to-primary/5 py-6 sm:py-10 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto space-y-8">
         {/* Breadcrumb Navigation */}
-        <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs text-muted-foreground">
-          <Link href="/" className="hover:text-foreground transition-colors">
-            Home
-          </Link>
-          <ChevronRight className="w-3.5 h-3.5 text-muted-foreground/60" />
-          <span className="text-foreground font-medium">{title}</span>
-        </nav>
+        <div className="flex items-center justify-between flex-wrap gap-2 text-xs text-muted-foreground">
+          <nav aria-label="Breadcrumb" className="flex items-center gap-2">
+            <Link href="/" className="hover:text-foreground transition-colors">
+              Home
+            </Link>
+            <ChevronRight className="w-3.5 h-3.5 text-muted-foreground/60" />
+            <span className="text-foreground font-medium">{title}</span>
+          </nav>
+
+          <a
+            href="https://longnd.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-primary transition-colors inline-flex items-center gap-1 text-[11px] font-medium"
+            title="Nguyen Dai Long (NDL) Portfolio"
+          >
+            <span>Crafted by NDL</span>
+            <ExternalLink className="w-3 h-3 opacity-70" />
+          </a>
+        </div>
 
         {/* Tool Header */}
         <header className="text-center max-w-3xl mx-auto space-y-3">

@@ -10,9 +10,12 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'Image Compressor - Fast & Secure Image Compression',
-  description: 'Compress images directly in your browser with multiple format support and advanced options. Free, fast, and completely private.',
-  generator: 'v0.app',
+  title: 'Online Image Tools - Fast & Private Image Processing by NDL',
+  description:
+    'Compress, resize, crop, convert, rotate, and edit images directly in your browser. 100% private, zero uploads. Created by Nguyen Dai Long (NDL).',
+  authors: [{ name: 'Nguyen Dai Long (NDL)', url: 'https://longnd.vercel.app/' }],
+  creator: 'Nguyen Dai Long (NDL)',
+  publisher: 'Nguyen Dai Long (NDL)',
   icons: {
     icon: [
       {

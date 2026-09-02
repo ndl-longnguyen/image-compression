@@ -14,6 +14,8 @@ import {
   ArrowRight,
   CheckCircle,
   HelpCircle,
+  ExternalLink,
+  Globe,
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
@@ -150,9 +152,22 @@ export default function HomePage() {
               className="relative w-24 h-24 sm:w-28 sm:h-28 rounded-full object-cover shadow-2xl border-2 border-amber-500/40 ring-4 ring-black/10 transition-transform duration-300 group-hover:scale-105"
             />
           </div>
-          <div className="mt-4 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-semibold border border-primary/20">
-            <Sparkles className="w-3.5 h-3.5 text-amber-500" />
-            <span>Next-Generation Online Image Suite</span>
+          <div className="mt-4 flex flex-wrap items-center justify-center gap-2">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-semibold border border-primary/20">
+              <Sparkles className="w-3.5 h-3.5 text-amber-500" />
+              <span>Next-Generation Online Image Suite</span>
+            </span>
+            <a
+              href="https://longnd.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary/80 hover:bg-secondary text-foreground text-xs font-medium border border-border/70 hover:border-primary/50 transition-all group"
+              title="Visit Nguyen Dai Long's Profile"
+            >
+              <span>By</span>
+              <strong className="text-primary group-hover:underline">Nguyen Dai Long (NDL)</strong>
+              <ExternalLink className="w-3 h-3 text-muted-foreground group-hover:text-primary transition-colors" />
+            </a>
           </div>
         </div>
 
@@ -343,6 +358,46 @@ export default function HomePage() {
               </p>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* Creator Spotlight */}
+      <section className="max-w-4xl mx-auto p-8 rounded-3xl bg-gradient-to-r from-primary/10 via-card to-amber-500/10 border border-border/80 shadow-sm">
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">
+          <div className="flex flex-col sm:flex-row items-center gap-4">
+            <div className="relative shrink-0">
+              <div className="absolute -inset-1 bg-gradient-to-r from-amber-500/40 to-primary/40 rounded-full blur-xs"></div>
+              <img
+                src="/logo.png"
+                alt="NDL Logo"
+                className="relative w-16 h-16 rounded-full object-cover border-2 border-primary/40 shadow-sm"
+              />
+            </div>
+            <div className="space-y-1">
+              <span className="text-[11px] font-bold text-primary uppercase tracking-wider">
+                Developed by
+              </span>
+              <h3 className="text-xl font-extrabold text-foreground">
+                Nguyen Dai Long (NDL)
+              </h3>
+              <p className="text-xs text-muted-foreground max-w-md leading-relaxed">
+                Software Engineer specializing in scalable backend systems, high-performance web applications, and modern cloud architectures.
+              </p>
+            </div>
+          </div>
+
+          <a
+            href="https://longnd.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="shrink-0"
+          >
+            <Button size="lg" className="gap-2 font-semibold shadow-xs">
+              <Globe className="w-4 h-4" />
+              <span>Visit NDL Profile</span>
+              <ExternalLink className="w-3.5 h-3.5" />
+            </Button>
+          </a>
         </div>
       </section>
     </div>
