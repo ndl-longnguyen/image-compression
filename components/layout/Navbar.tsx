@@ -1,5 +1,7 @@
 'use client';
 
+import { MAIN_SITE_URL } from "@/lib/config/site";
+
 import { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -66,7 +68,7 @@ export function Navbar() {
 
           {/* NDL Profile link */}
           <a
-            href="https://longnd.vercel.app/"
+            href="{MAIN_SITE_URL}"
             target="_blank"
             rel="noopener noreferrer"
             className="hidden md:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold bg-secondary/80 hover:bg-secondary border border-border/80 text-foreground transition-all hover:border-primary/50 hover:text-primary group shadow-2xs"
@@ -114,7 +116,7 @@ export function Navbar() {
 
           <div className="pt-2 border-t border-border/40">
             <a
-              href="https://longnd.vercel.app/"
+              href="{MAIN_SITE_URL}"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-between px-3 py-2.5 rounded-lg text-sm font-semibold bg-primary/10 text-primary hover:bg-primary/20 transition-colors"

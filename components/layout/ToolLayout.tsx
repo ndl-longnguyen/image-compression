@@ -1,5 +1,7 @@
 'use client';
 
+import { MAIN_SITE_URL } from "@/lib/config/site";
+
 import React from 'react';
 import Link from 'next/link';
 import { ChevronRight, LucideIcon, ExternalLink } from 'lucide-react';
@@ -35,7 +37,7 @@ export function ToolLayout({
           </nav>
 
           <a
-            href="https://longnd.vercel.app/"
+            href="{MAIN_SITE_URL}"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-primary transition-colors inline-flex items-center gap-1 text-[11px] font-medium"

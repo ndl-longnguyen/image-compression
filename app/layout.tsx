@@ -1,3 +1,5 @@
+import Script from "next/script"
+import { SITE_URL, MAIN_SITE_URL } from "@/lib/config/site"
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
@@ -13,7 +15,11 @@ export const metadata: Metadata = {
   title: 'Online Image Tools - Fast & Private Image Processing by NDL',
   description:
     'Compress, resize, crop, convert, rotate, and edit images directly in your browser. 100% private, zero uploads. Created by Nguyen Dai Long (NDL).',
-  authors: [{ name: 'Nguyen Dai Long (NDL)', url: 'https://longnd.vercel.app/' }],
+  metadataBase: new URL(SITE_URL),
+  authors: [{ name: 'Nguyen Dai Long (NDL)', url: MAIN_SITE_URL }],
+  alternates: {
+    canonical: SITE_URL,
+  },
   creator: 'Nguyen Dai Long (NDL)',
   publisher: 'Nguyen Dai Long (NDL)',
   icons: {
@@ -76,6 +82,12 @@ export default function RootLayout({
   return (
     <html lang="en" className={`bg-background ${geistSans.variable} ${geistMono.variable}`}>
       <body className="font-sans antialiased text-foreground bg-background">
+                <Script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9166964727480227"
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
+        />
         <div className="flex min-h-screen flex-col">
           <Navbar />
           <div className="flex-1">{children}</div>

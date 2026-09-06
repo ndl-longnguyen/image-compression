@@ -1,23 +1,23 @@
-import { MetadataRoute } from 'next';
+import { MetadataRoute } from "next"
+import { SITE_URL } from "@/lib/config/site"
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://ndl-image-tools.vercel.app';
-  const currentDate = new Date();
+  const currentDate = new Date()
 
   const routes = [
-    '',
-    '/image-compressor',
-    '/image-resizer',
-    '/image-cropper',
-    '/image-converter',
-    '/image-rotate',
-    '/image-editor',
-  ];
+    "",
+    "/image-compressor",
+    "/image-resizer",
+    "/image-cropper",
+    "/image-converter",
+    "/image-rotate",
+    "/image-editor",
+  ]
 
   return routes.map((route) => ({
-    url: `${baseUrl}${route}`,
+    url: `${SITE_URL}${route}`,
     lastModified: currentDate,
-    changeFrequency: 'weekly',
-    priority: route === '' ? 1.0 : 0.8,
-  }));
+    changeFrequency: "weekly" as const,
+    priority: route === "" ? 1.0 : 0.8,
+  }))
 }

@@ -1,11 +1,13 @@
-import { MetadataRoute } from 'next';
+import { MetadataRoute } from "next"
+import { SITE_URL } from "@/lib/config/site"
 
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: {
-      userAgent: '*',
-      allow: '/',
+      userAgent: "*",
+      allow: "/",
     },
-    sitemap: 'https://ndl-image-tools.vercel.app/sitemap.xml',
-  };
+    sitemap: `${SITE_URL}/sitemap.xml`,
+    host: SITE_URL,
+  }
 }

@@ -1,3 +1,4 @@
+import { MAIN_SITE_URL } from "@/lib/config/site"
 import Link from 'next/link';
 import {
   Minimize2,
@@ -158,7 +159,7 @@ export default function HomePage() {
               <span>Next-Generation Online Image Suite</span>
             </span>
             <a
-              href="https://longnd.vercel.app/"
+              href="{MAIN_SITE_URL}"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary/80 hover:bg-secondary text-foreground text-xs font-medium border border-border/70 hover:border-primary/50 transition-all group"
@@ -387,7 +388,7 @@ export default function HomePage() {
           </div>
 
           <a
-            href="https://longnd.vercel.app/"
+            href="{MAIN_SITE_URL}"
             target="_blank"
             rel="noopener noreferrer"
             className="shrink-0"

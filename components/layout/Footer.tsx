@@ -1,3 +1,4 @@
+import { MAIN_SITE_URL } from "@/lib/config/site"
 import Link from 'next/link';
 import { TOOL_NAV_ITEMS } from '@/lib/navigation';
 import { ShieldCheck, Lock, Zap, ExternalLink, Globe, Mail, Briefcase } from 'lucide-react';
@@ -22,7 +23,7 @@ export function Footer() {
             <p className="text-sm text-muted-foreground leading-relaxed">
               High-performance, privacy-focused browser toolkit created by{' '}
               <a
-                href="https://longnd.vercel.app/"
+                href={MAIN_SITE_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-foreground font-semibold hover:text-primary underline underline-offset-4 decoration-primary/40 transition-colors"
@@ -88,14 +89,44 @@ export function Footer() {
               <ul className="space-y-2 text-sm">
                 <li>
                   <a
-                    href="https://longnd.vercel.app/"
+                    href={MAIN_SITE_URL}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 text-primary font-semibold hover:underline transition-colors"
                   >
                     <Globe className="w-4 h-4" />
-                    <span>NDL Portfolio Website</span>
+                    <span>NDL Portfolio Hub</span>
                     <ExternalLink className="w-3 h-3 opacity-70" />
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href={`${MAIN_SITE_URL}/blog`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
+                  >
+                    <span>Engineering Blog</span>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href={`${MAIN_SITE_URL}/privacy-policy`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
+                  >
+                    <span>Privacy Policy</span>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href={`${MAIN_SITE_URL}/terms`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
+                  >
+                    <span>Terms of Service</span>
                   </a>
                 </li>
                 <li>
@@ -130,7 +161,7 @@ export function Footer() {
           <div className="flex items-center gap-2">
             <span>Designed & Built by</span>
             <a
-              href="https://longnd.vercel.app/"
+              href={MAIN_SITE_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="font-bold text-foreground hover:text-primary inline-flex items-center gap-1 transition-colors"
